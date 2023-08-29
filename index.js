@@ -1,11 +1,5 @@
-const express = require('express')
-const app = express()
-app.get('/', (req, res) => { 
-    res.status(200).json({
-        message: 'Rabotaet'
-    })
+const app = require('./app')
+const port = process.env.PORT || 5000
 
-})
-app.listen(5000, () => {
-    console.log('server has been rabotaet')
-})
+app.listen(port, () => 
+    console.log('server has been rabotaet ${port}')    )
